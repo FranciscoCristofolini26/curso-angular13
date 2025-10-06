@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TarefaService, Tarefa } from '../shared';
+import { TarefaService, Tarefa } from '..';
 
 @Component({
   selector: 'app-listar-tarefa',
@@ -25,6 +25,10 @@ export class ListarTarefaComponent implements OnInit {
   }
 
   remover($event: any, tarefa: Tarefa): void {
-
+    $event.preventDefault();
+    if (confirm('Deseja remover a tarefa " ' + tarefa.nome + '"?')) {
+      this.tarefaService.remover(tarefa.id);
+      this.tarefas = this.listarTodos();
+    }
   }
 }
