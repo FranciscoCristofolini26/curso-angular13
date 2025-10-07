@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import {  Moeda, Conversao, ConversaoResponse } from '../models';
 import { MoedaService, ConversorService } from '../services';
+import { ModalCotacaoComponent } from '../utils';
+
 
 @Component({
   selector: 'app-conversor',
@@ -34,7 +36,12 @@ export class ConversorComponent implements OnInit {
 
   converter(): void {
     if (this.conversaoForm.form.valid) {
-      alert('Convertendo' + JSON.stringify(this.conversao))
+      this.conversorService
+        .converter(this.conversao)
+        .subscribe(
+          response => this.conversaoResponse = response,
+          error => this.possuiErro = true
+        );
     }
   }
 }
