@@ -1,0 +1,5 @@
+export * from './shared/tarefa.model'
+export * from './tarefas.module'
+export * from './shared/tarefa.service'
+export * from './tarefas-routing.module'
+export * from './cadastrar'

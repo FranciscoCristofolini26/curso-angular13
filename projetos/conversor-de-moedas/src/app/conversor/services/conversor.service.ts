@@ -13,7 +13,7 @@ export class ConversorService {
   // NOTE: The fixer.io free tier might require an access key and uses 'api.apilayer.com/fixer'
   //       Ensure your BASE_URL and API are correct and accessible.
   //       The original URL "http://api.fixer.io/latest" is often deprecated.
-  private readonly BASE_URL = "http://api.fixer.io/latest"; 
+  private readonly BASE_URL = "http://api.fixer.io/latest?0138904fb6412bdba3aafede67e6c015"; 
 
   // FIX 2: Inject HttpClient instead of HttpClientModule
   constructor(private http: HttpClient) { } 

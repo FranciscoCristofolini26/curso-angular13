@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core'; 
 import { NgForm } from '@angular/forms'
 import { Router } from '@angular/router';
-import { TarefaService, Tarefa } from '..';
+import { TarefaService, Tarefa } from '../shared';
 
 @Component({
   selector: 'app-cadastrar-tarefa',

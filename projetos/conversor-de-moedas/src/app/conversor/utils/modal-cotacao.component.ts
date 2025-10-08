@@ -20,9 +20,9 @@ export class ModalCotacaoComponent implements OnInit {
 
   }
 
-  /*novaConsulta() {
+  novaConsulta() {
     this.onConfirm.emit();
-  }*/
+  }
 
   get valorConvertido(): string {
     if (this.conversaoResponse === undefined) {

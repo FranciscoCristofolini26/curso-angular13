@@ -6,7 +6,7 @@ import { ListarTarefaComponent } from './listar';
 import { RouterModule } from '@angular/router';
 import { CadastrarTarefaComponent } from './cadastrar';
 import { EditarTarefaComponent } from './editar';
-import {  } from './shared/tarefa-concluida.directive';
+
 
 
 
@@ -23,6 +23,11 @@ import {  } from './shared/tarefa-concluida.directive';
     CommonModule, 
     RouterModule,
     FormsModule
+  ],
+  exports: [
+    ListarTarefaComponent,
+    CadastrarTarefaComponent,
+    EditarTarefaComponent,
   ],
   providers: [
     TarefaService

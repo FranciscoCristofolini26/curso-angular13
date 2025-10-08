@@ -1,2 +1,4 @@
-export * from './tarefa.model';
-export * from './tarefa.service';
+export * from './app-routing.module';
+export * from './app.component';
+export * from './tarefas'
+export * from './app.module'
