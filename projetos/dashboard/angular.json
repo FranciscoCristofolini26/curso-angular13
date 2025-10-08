@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "jogo-da-velha": {
+    "dashboard": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
-          "strict": false
+          "strict": true
         }
       },
       "root": "",
@@ -17,18 +17,17 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/jogo-da-velha",
+            "outputPath": "dist/dashboard",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico"
-              
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
               "src/styles.css"
-              
             ],
             "scripts": []
           },
@@ -69,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "jogo-da-velha:build:production"
+              "browserTarget": "dashboard:build:production"
             },
             "development": {
-              "browserTarget": "jogo-da-velha:build:development"
+              "browserTarget": "dashboard:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "jogo-da-velha:build"
+            "browserTarget": "dashboard:build"
           }
         },
         "test": {
@@ -103,5 +102,5 @@
       }
     }
   },
-  "defaultProject": "jogo-da-velha"
+  "defaultProject": "dashboard"
 }
