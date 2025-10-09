@@ -25,9 +25,9 @@ export class EditarTarefaComponent implements OnInit {
   }
 
   atualizar(): void {
-    if (this.formTarefa.form.valid) {
+    if (this.formTarefa && this.formTarefa.form.valid) {
       this.tarefaService.atualizar(this.tarefa);
-      this.router.navigate(['/tarefas']);
+      this.router.navigate(['/tarefas/listar']);
     }
   }
 
