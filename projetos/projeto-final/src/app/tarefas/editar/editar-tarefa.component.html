@@ -1,7 +1,7 @@
 <h1>Editar tarefa</h1>
 
 <div class="well">
-  <form>
+  <form #formTarefa="ngForm" (ngSubmit)="atualizar()">
     <div class="form-group">
       <label for="nome">Tarefa:</label>
       <input 
@@ -9,6 +9,7 @@
         class="form-control"
         id="nome"
         name="nome"
+        [(ngModel)]="tarefa.nome"
         minlength="5" 
         required> 
       <div class="alert alert-danger">
@@ -24,8 +25,9 @@
       <input 
         type="submit"
         class="btn btn-success"
-        value="Atualizar">
-      <a 
+        value="Atualizar"
+        >
+      <a [routerLink]="['/tarefas/listar']"
         class="btn btn-default">
         <span class="glyphicon glyphicon-chevron-left" 
           aria-hidden="true"></span> Voltar

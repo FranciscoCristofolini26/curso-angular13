@@ -24,12 +24,12 @@
     </div>
     <div class="form-group text-center">
       <input 
-        type="submit"
+        type="button"
         class="btn btn-success"
         (click)="cadastrar()"
         value="Cadastrar"
         [disabled]="!formTarefa.form.valid">
-      <a [routerLink]="['/tarefas']";
+      <a [routerLink]="['/tarefas']"
         class="btn btn-default">
         <span class="glyphicon glyphicon-chevron-left" 
           aria-hidden="true"></span> Voltar
